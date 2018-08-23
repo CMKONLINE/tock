@@ -25,5 +25,6 @@ class LoginEvent(
     userId: PlayerId,
     recipientId: PlayerId,
     val userToken: String,
-    applicationId: String) : OneToOneEvent(userId, recipientId, applicationId)
+    applicationId: String,
+    var checkLogin:Boolean = false) : OneToOneEvent(userId, recipientId, applicationId)
 
