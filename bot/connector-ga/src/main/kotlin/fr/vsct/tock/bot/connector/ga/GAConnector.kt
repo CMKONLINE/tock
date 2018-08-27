@@ -108,6 +108,7 @@ class GAConnector internal constructor(
                         ),
                         ConnectorData(object : ConnectorCallbackBase(applicationId, gaConnectorType) {
 
+                            // send 401 for revoke token and logout google assistant user
                             override fun eventSkipped(event: Event) {
                                 context.fail(401)
                             }
